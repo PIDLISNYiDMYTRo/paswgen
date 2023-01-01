@@ -1,0 +1,73 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Advanced Password Generator</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="style.css" />
+	<!-- Кодировка страницы -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="container">
+		<div class="content__row">
+			<div class="title">
+				<h1>Advanced Password Generator</h1>
+			</div>
+			<div class="main">
+				<div class="main__top">
+					<p>
+						<label for="passwordLength">Вибрати довжину:</label>
+						<input type="number" id="passwordLength" value="16" min="8" max="128">
+					</p>
+				</div>
+				<div class="main__body">
+					<p>
+						<label for="includeLowercase">абвгд</label>
+						<input type="checkbox" id="includeLowercase" checked>
+					</p>
+					<p>
+						<label for="includeUppercase">АБВГД</label>
+						<input type="checkbox" id="includeUppercase" checked>
+					</p>
+					<p>
+						<label for="includeNumbers">01234</label>
+						<input type="checkbox" id="includeNumbers" checked>
+					</p>
+					<p>
+						<label for="includeSymbols">"!@#$%"</label>
+						<input type="checkbox" id="includeSymbols" checked>
+					</p>
+				</div>
+				<div class="main__footer">
+					<p>
+						<label for="password"></label>
+						<input type="text" id="password" readonly placeholder="Згенерований пароль">
+					</p>
+					<br>
+					<p>
+						<button onclick="generatePassword()">Згенерувати пароль</button>
+					</p>
+				</div>
+				<p>
+					<button class="copypasswd" onclick="copyPassword()">Скопіювати пароль</button>
+				</p>
+				<div id="prompt">Пароль скопійовано</div>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
+
+</body>
+
+</html>
